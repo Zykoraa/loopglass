@@ -1,0 +1,2 @@
+include LICENSE THIRD_PARTY_NOTICES.md SECURITY.md README.md install.py app.py test_monitor.py test_release.py
+recursive-include loopglass *.svg *.png

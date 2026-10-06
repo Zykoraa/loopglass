@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "loopglass"
+version = "0.1.0"
+description = "Find and safely stop local web app listeners on Linux"
+readme = "README.md"
+requires-python = ">=3.10,<3.15"
+authors = [{name = "Zykoraa"}]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: X11 Applications :: Qt",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Topic :: System :: Monitoring",
+]
+dependencies = ["psutil>=5.9,<8", "PySide6>=6.5,<7"]
+
+[project.scripts]
+loopglass = "loopglass.app:main"
+
+[project.urls]
+Homepage = "https://github.com/Zykoraa/loopglass"
+Issues = "https://github.com/Zykoraa/loopglass/issues"
+
+[tool.setuptools]
+packages = ["loopglass", "loopglass.brand"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+loopglass = ["icon.svg", "brand/*.svg", "brand/*.png"]
